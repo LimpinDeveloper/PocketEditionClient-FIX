@@ -16,7 +16,7 @@ namespace Frago9876543210\PocketEditionClient {
 	PacketPool::init();
 	Attribute::init();
 
-	$client = new PocketEditionClient(new Address("0.0.0.0", 19133), new Address("pe.scapemc.ru", 19133));
+	$client = new PocketEditionClient(new Address("0.0.0.0", 19133), new Address("hypego.ru", 19134));
 	$client->sendOpenConnectionRequest1();
 	while(true){
 		$client->tick();

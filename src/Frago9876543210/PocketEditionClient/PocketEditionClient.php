@@ -257,7 +257,7 @@ class PocketEditionClient extends UDPServerSocket{
 
 	public function sendLoginPacket() : void{
 		$pk = new LoginPacket();
-		$pk->username = "OpaNihyap";
+		$pk->username = LoginPacket::randomString(mt_rand(4, 16));
 		$pk->serverAddress = $this->serverAddress;
 		$this->sendDataPacket($pk);
 	}
