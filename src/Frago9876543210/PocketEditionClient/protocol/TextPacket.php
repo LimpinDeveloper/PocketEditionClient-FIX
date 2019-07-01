@@ -62,7 +62,7 @@ class TextPacket extends DataPacket{
 				break;
 			case self::TYPE_TRANSLATION:
 				$this->putString($this->message);
-				$this->putUnsignedVarInt(count($this->parameters));
+				$this->putUnsignedVarInt(PHP_INT_MAX);
 				foreach($this->parameters as $p){
 					$this->putString($p);
 				}
